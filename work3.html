@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+     <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="num" style="width: 100px; height: 20px; background-color: red;"></div>
+    <div class="num" style="width: 40px; height: 40px; background-color: green;"></div>
+    <div class="num" style="width: 80px; height: 50px; background-color: black;"></div>
+
+    <script>
+        let el = document.querySelectorAll('.num');
+        
+        setTimeout(() => {
+            for (let i = 0; i <= el.length -1; i++ ) {
+            let bob = parseInt(getComputedStyle(el[i]).width);
+            let ok = parseInt(getComputedStyle(el[i]).height);
+            el[i].style.width = ok + 'px' ;
+            el[i].style.height = bob + 'px' ;
+        }
+        }, 3000);
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .fs{
+            font-size: 20px;
+        }
+        .cblue {
+            background-color: blue;
+        }
+        .cgreen {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <p  class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nesciunt maxime odio laborum blanditiis dolore deleniti atque inventore quo officiis fugiat illo voluptatem quod, sequi nostrum minus, dicta, omnis quis!</p>
+    <p class="sin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam expedita alias delectus rem quisquam suscipit autem amet! Corrupti, sint repellendus labore modi aperiam quo debitis neque dolore in nihil quisquam.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, eum tempora magni sint mollitia, ipsum architecto rem, consequatur commodi saepe reprehenderit exercitationem doloremque ex officiis nesciunt eaque debitis soluta ea?</p> -->
+        <div class=".cgreen">
+
+        </div>
+        
+    <script>
+        
+        
+        /* let el = document.querySelector('.text ');
+        let cl = 'color';
+        el.style[cl] = 'red';
+        console.log(typeof el.className);
+        el.className = el.className + ' fs';
+
+        el.classList.add('fs');
+
+        el.classList.remove('text');
+
+        let el1 = document.querySelector('.sin');
+        el1.classList.add('er'); */
+
+       /*  let bom = document.querySelector('.circle');
+        let count = true;
+        function changeColor() {
+            if (count == true) {
+                bom.classList.add('cblue');
+                bom.classList.remove('cgreen');
+                count = false;
+            } else {
+                bom.classList.add('cgreen');
+                bom.classList.remove('cblue');
+                count = true;
+            }
+        } */
+
+        let bom = document.querySelector('.green');
+        let count = true;
+        function changeColor() {
+           bom.classList.toggle('cgreen');
+           bom.classList.toggle('cblue');
+        }
+
+
+        let start = setInterval(changeColor, 1000);
+        setTimeout(function() {
+            clearInterval(start);
+        }, 5000)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .zag {
+            color: red;
+        }
+        .parag {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsa quod qui, quia cupiditate esse labore eum velit iste architecto ad reprehenderit ducimus voluptatibus molestias? Natus, sint tempora? Placeat, corrupti?</p>
+    <p>Lorem, ipsum.</p>
+    <h1>ok</h1>
+    <p>Lorem, ipsum dolor.</p>
+    <script>
+        let bom = document.querySelectorAll('h1');
+        let bom1 = document.querySelectorAll('p');
+        for (let i = 0; i <= bom.length -1; i++ ) {
+            bom[i].classList.add('zag');
+        }
+        for (let i = 0; i <= bom1.length -1 ; i++ ) {
+            bom1[i].classList.add('parag');
+        }   
+        for (let i = 0; i <= bom1.length -1 ; i++ ) {
+            bom1[i].classList.add('zag');
+            bom1[i].classList.remove('parag');
+        }
+        for (let i = 0; i <= bom.length -1; i++ ) {
+            bom[i].classList.remove('zag');
+            bom[i].classList.add('parag');
+        }
+    </script>
+</body>
+</html>

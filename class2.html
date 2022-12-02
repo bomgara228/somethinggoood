@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cb {
+            background-color: blue;
+        }
+        .cg {
+            background-color: green;
+        }
+        .circle {
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;  
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+
+
+    <script>
+        let el = document.querySelector('.circle');
+        let start = setInterval(function() {
+            el.style[`background-color`] = `rgb(${getRC()},${getRC()},${getRC()})`;
+        }, 1000)
+        function getRC() {
+            return Math.floor(Math.random() * 256);
+        }
+        setTimeout(() => {
+            el.style.width = parseInt(getComputedStyle(el).width) + 100 +'px' ;
+            el.style.height = parseInt(getComputedStyle(el).height) + 100 + 'px';
+        }, 5000);
+        console.log(getComputedStyle(el).width);
+    </script>
+</body>
+</html>
